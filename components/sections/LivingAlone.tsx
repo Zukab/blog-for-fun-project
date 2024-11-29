@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Home } from "lucide-react";
+import Image from 'next/image';
 
 export default function LivingAlone() {
   const [ref, inView] = useInView({
@@ -31,7 +32,7 @@ export default function LivingAlone() {
                 ice cream for breakfast if that's your thing (we won't judge, ok teacher? hehe).
               </p>
               <p>
-                The freedom is amazing, but let's be real you'll need to master the art of 
+                The freedom is amazing, but let&apos;s be real you&apos;ll need to master the art of 
                 adulting. That means budgeting, cooking, cleaning, and figuring out why the 
                 washing machine is making that weird noise at 2 AM.
               </p>
@@ -42,9 +43,11 @@ export default function LivingAlone() {
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
               alt="Cozy apartment living room"
+              width={2340}
+              height={1560}
               className="rounded-2xl shadow-2xl"
             />
           </motion.div>

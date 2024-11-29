@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Users } from "lucide-react";
+import Image from 'next/image';
 
 export default function LivingWithFamily() {
   const [ref, inView] = useInView({
@@ -25,9 +26,11 @@ export default function LivingWithFamily() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="order-2 md:order-1"
           >
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
               alt="Family dinner time"
+              width={2340}
+              height={1560}
               className="rounded-2xl shadow-2xl"
             />
           </motion.div>
